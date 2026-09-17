@@ -5,7 +5,7 @@ type Variant = 'primary' | 'outline' | 'ghost'
 type Size = 'sm' | 'md' | 'lg'
 
 const base =
-	'inline-flex items-center justify-center gap-2 font-sans uppercase tracking-[0.15em] text-xs transition-colors duration-200 disabled:opacity-50 disabled:pointer-events-none rounded-sm cursor-pointer'
+	'inline-flex items-center justify-center gap-2 text-center font-sans uppercase tracking-[0.15em] text-xs transition-colors duration-200 disabled:opacity-50 disabled:pointer-events-none rounded-sm cursor-pointer'
 
 const variants: Record<Variant, string> = {
 	primary:
@@ -16,9 +16,9 @@ const variants: Record<Variant, string> = {
 }
 
 const sizes: Record<Size, string> = {
-	sm: 'h-9 px-4',
-	md: 'h-11 px-6',
-	lg: 'h-13 px-8 py-4',
+	sm: 'min-h-9 px-4',
+	md: 'min-h-11 px-6',
+	lg: 'min-h-13 px-8 py-3.5',
 }
 
 interface CommonProps {
